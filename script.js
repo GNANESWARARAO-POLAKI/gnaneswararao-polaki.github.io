@@ -237,7 +237,7 @@ const projects = [
         tools: ['Django', 'HTML', 'CSS', 'JavaScript', 'FastAPI'],
         timeline: 'December 2024 - Present',
         challenges: 'Developing CodeHub came with several challenges, including ensuring real-time submission processing for fast and accurate evaluations and scalability to handle high participant loads efficiently. Security was a major concern, requiring plagiarism detection and protection against unauthorized access. Optimizing the database for handling large datasets of submissions and rankings was crucial for performance. Additionally, load testing with Locust was essential to simulate high traffic and fine-tune server response times for a smooth user experience.',
-        liveDemo: 'code-hub-seven.vercel.app',
+        liveDemo: 'https://code-hub-seven.vercel.app',
         code: 'https://github.com/GNANESWARARAO-POLAKI/CodeHub',
         image:'CodeHub.png',
     },
@@ -258,7 +258,7 @@ const projects = [
         tools: ['React', 'Django', 'PostgreSQL','Python'],
         timeline: 'Febraury 2024- April 2024',
         challenges: 'Developing LeafCare AI presented several challenges, including ensuring high-accuracy disease detection by training machine learning models on diverse datasets. Handling image processing efficiently was crucial for accurate predictions while maintaining fast response times. Integration with Gemini AI required optimizing model inference to work seamlessly within a web-based environment. Ensuring a user-friendly interface for farmers and researchers while providing detailed insights on diseases was another challenge. Additionally, maintaining scalability to handle large numbers of image uploads and predictions without performance issues was a key concern. ',
-        liveDemo: 'leafai-five.vercel.app',
+        liveDemo: 'https://leafai-five.vercel.app',
         code: 'https://github.com/GNANESWARARAO-POLAKI/LeafCareAI',
         image:'LeafCareAI.png',
     }
