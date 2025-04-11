@@ -929,7 +929,7 @@ h2::after {
     position: relative;
     z-index: 2;
     min-width:200px;
-    height: 200px;
+    height: min-content;
 
 }
 
@@ -970,6 +970,6 @@ h2::after {
 
 .timeline-content p{
     /* font-size:0.9rem; */
-    overflow-wrap:normal;
+    overflow-wrap:break-word;
     line-height: 2rem;
 }
