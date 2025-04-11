@@ -106,10 +106,8 @@ const contactForm = document.getElementById('contact-form');
 
 contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
     const button = contactForm.querySelector('button');
     const originalText = button.textContent;
-    
     // Animation for button
     button.textContent = 'Sending...';
     button.style.opacity = '0.7';
@@ -314,11 +312,19 @@ function initializeProjects() {
             <div class="project-links">
                 <a href="${project.liveDemo}" target="_blank">Live Demo</a>
                 <a href="${project.code}" target="_blank">Code</a>
+                <a>Details</a>                                                         
             </div>
         `;
 
         projectCard.addEventListener('click', (e) => {
-            if (!e.target.closest('a')) {
+            const detailsLink = e.target.closest('a');
+        
+            // Check if the clicked element is the "Details" link
+            if (detailsLink && detailsLink.textContent.trim() === 'Details') {
+                e.preventDefault(); // Prevent default link behavior
+                showProjectDetails(project, modal); // Open the modal with project details
+            } else if (!detailsLink) {
+                // If clicked anywhere else on the card, open the modal
                 showProjectDetails(project, modal);
             }
         });
@@ -362,3 +368,4 @@ window.addEventListener('DOMContentLoaded', () => {
 window.onload = () => {
     type();
 };
+
