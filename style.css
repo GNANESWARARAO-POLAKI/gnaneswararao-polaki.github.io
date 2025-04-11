@@ -932,7 +932,6 @@ h2::after {
     height: min-content;
     min-height: 200px;
     
-
 }
 
 /* Horizontal Timeline for Large Screens */
@@ -974,4 +973,21 @@ h2::after {
     /* font-size:0.9rem; */
     overflow-wrap:break-word;
     line-height: 2rem;
+}
+
+.symbol {
+    position: absolute;
+    color: #2563eb;
+    font-size: 24px;
+    opacity: 1;
+    user-select: none;
+    pointer-events: none;
+    animation: move 10s linear infinite;
+    z-index: -1;
+  }
+@keyframes move {
+    0% { transform:translate(0, 0) rotate(var(--angle));
+    opacity: 0.3; }
+    100% {transform: translate(var(--dx), var(--dy)) rotate(var(--angle));
+        opacity: 0.5; }
 }

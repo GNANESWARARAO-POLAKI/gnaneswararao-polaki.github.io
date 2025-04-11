@@ -263,6 +263,7 @@ const projects = [
 ];
 
 function createProjectModal() {
+    
     const modal = document.createElement('div');
     modal.className = 'project-modal';
     modal.innerHTML = `
@@ -357,11 +358,33 @@ function showProjectDetails(project, modal) {
     
     modal.classList.add('active');
 }
+function animateSkils(){
+    const skillsec=document.getElementById('skills');
+    const symbols = '?{}[]()<>!@#$%^&*+=_|';
+    const count = 500;
+    for (let i = 0; i < count; i++) {
+        const span = document.createElement('span');
+        span.className = 'symbol';
+        span.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+        span.style.left = `${Math.random() * 100}vw`;
+        span.style.top = `${Math.random() * 100}vh`;
+        const angle = `${Math.random() * 360}deg`;
+        span.style.setProperty('--angle', angle);
+        const dx = `${(Math.random() - 0.5) * 100}px`;
+        const dy = `${(Math.random() - 0.5) * 100}px`;
+        span.style.setProperty('--dx', dx);
+        span.style.setProperty('--dy', dy);
+        span.style.animationDelay = `${Math.random() * 5}s`;
+
+        skillsec.appendChild(span);
+    }
+}
 
 // Initialize skills and projects when the page loads
 window.addEventListener('DOMContentLoaded', () => {
     initializeSkills();
     initializeProjects();
+    animateSkils();
 });
 
 // Start typing animation when page loads
