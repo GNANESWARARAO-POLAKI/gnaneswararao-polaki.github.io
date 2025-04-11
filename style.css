@@ -930,6 +930,8 @@ h2::after {
     z-index: 2;
     min-width:200px;
     height: min-content;
+    min-height: 200px;
+    
 
 }
 
