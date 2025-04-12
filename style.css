@@ -270,7 +270,38 @@ nav {
     padding: 8rem 2rem;
     background-color: #fff;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Ensure background images stay within the section */
+}
+
+ .bg-image {
+    position: absolute;
+    /* width: 100px; */
+     /* Adjust size as needed */
+    height: 200px; 
+    /* Adjust size as needed */
+    opacity: 1; /* Make the images subtle */
+    z-index: -1; /* Ensure images are behind the text */
+    pointer-events: none; /* Prevent interaction with the images */
+}
+
+.bg-image:nth-child(1) {
+    top: 10%;
+    left: 15%;
+    /* transform: rotate(15deg); */
+}
+
+ .bg-image:nth-child(2) {
+    bottom: 0%;
+    right: 0%;
+    transform: rotate(-3deg);
+    /* opacity: 0.3; */
+}
+
+.skills .bg-image:nth-child(1){
+    opacity: 1;
+    top: 5%;
+    left: 10%;
+    z-index: 0;
 }
 
 .about::before {
@@ -308,10 +339,24 @@ nav {
 }
 
 /* Skills Section */
-.section-a {
+.skills {
     padding: 8rem 2rem;
     background: linear-gradient(135deg, #f8f9fa 0%, #e5e9ff 100%);
     position: relative;
+   
+}
+
+
+.skills::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.8) 100%);
+    z-index: -1;
+    opacity: 0.9;
 }
 
 .skills-grid {
@@ -718,6 +763,23 @@ h2::after {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .about .bg-image:nth-child(1) {
+        top: -5%;
+        left: -5%;
+        /* transform: rotate(15deg); */
+    }
+    .about .bg-image:nth-child(2) {
+        bottom: -1%;
+        right: -20%;
+        transform: rotate(-3deg);
+        opacity: 0.3;
+        display: none;
+    }
+    .skills .bg-image:nth-child(1){
+        opacity: 1;
+        top: -1%;
+        left: 1%;
+    }
     .nav-links {
         display: none;
         position: absolute;
@@ -975,16 +1037,22 @@ h2::after {
     line-height: 2rem;
 }
 
+#experience{
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow: hidden;
+}
+
 .symbol {
     position: absolute;
     color: #2563eb;
     font-size: 24px;
-    opacity: 1;
+    opacity: 0.3;
     user-select: none;
     pointer-events: none;
     animation: move 10s linear infinite;
-    z-index: -1;
-  }
+    z-index: -1; /* Ensure symbols are behind the content */
+}
 @keyframes move {
     0% { transform:translate(0, 0) rotate(var(--angle));
     opacity: 0.3; }

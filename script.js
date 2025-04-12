@@ -237,7 +237,7 @@ const projects = [
         challenges: 'Developing CodeHub came with several challenges, including ensuring real-time submission processing for fast and accurate evaluations and scalability to handle high participant loads efficiently. Security was a major concern, requiring plagiarism detection and protection against unauthorized access. Optimizing the database for handling large datasets of submissions and rankings was crucial for performance. Additionally, load testing with Locust was essential to simulate high traffic and fine-tune server response times for a smooth user experience.',
         liveDemo: 'https://code-hub-seven.vercel.app',
         code: 'https://github.com/GNANESWARARAO-POLAKI/CodeHub',
-        image:'CodeHub.png',
+        image:'assets/project-images/CodeHub.png',
     },
     {
         title: 'GMRIT-NOTES',
@@ -247,7 +247,7 @@ const projects = [
         timeline: 'December 2022 - March 2023',
         challenges: 'Developing GMRIT Notes came with several challenges, including creating a user-friendly and responsive UI for seamless navigation and access to study materials. Efficient file management was crucial to handle uploads, downloads, and storage while keeping content organized. Ensuring SEO optimization was a priority to improve search engine visibility for academic resources. Security concerns such as access control and preventing unauthorized uploads had to be addressed. Additionally, the platform needed to be scalable to accommodate a growing database of notes without compromising performance. ',
         liveDemo: 'http://gmrit-notes.great-site.net/',
-        image:'GMRIT-NOTES.png',
+        image:'assets/project-images/GMRIT-NOTES.png',
     },
     {
         title: 'LeafCare AI',
@@ -258,7 +258,7 @@ const projects = [
         challenges: 'Developing LeafCare AI presented several challenges, including ensuring high-accuracy disease detection by training machine learning models on diverse datasets. Handling image processing efficiently was crucial for accurate predictions while maintaining fast response times. Integration with Gemini AI required optimizing model inference to work seamlessly within a web-based environment. Ensuring a user-friendly interface for farmers and researchers while providing detailed insights on diseases was another challenge. Additionally, maintaining scalability to handle large numbers of image uploads and predictions without performance issues was a key concern. ',
         liveDemo: 'https://leafai-five.vercel.app',
         code: 'https://github.com/GNANESWARARAO-POLAKI/LeafCareAI',
-        image:'LeafCareAI.png',
+        image:'assets/project-images/LeafCareAI.png',
     }
 ];
 
@@ -299,6 +299,7 @@ function createProjectModal() {
     return modal;
 }
 
+
 function initializeProjects() {
     const projectsGrid = document.querySelector('.projects-grid');
     const modal = createProjectModal();
@@ -320,12 +321,11 @@ function initializeProjects() {
         projectCard.addEventListener('click', (e) => {
             const detailsLink = e.target.closest('a');
         
-            // Check if the clicked element is the "Details" link
+           
             if (detailsLink && detailsLink.textContent.trim() === 'Details') {
-                e.preventDefault(); // Prevent default link behavior
-                showProjectDetails(project, modal); // Open the modal with project details
+                e.preventDefault(); 
+                showProjectDetails(project, modal); 
             } else if (!detailsLink) {
-                // If clicked anywhere else on the card, open the modal
                 showProjectDetails(project, modal);
             }
         });
@@ -359,7 +359,7 @@ function showProjectDetails(project, modal) {
     modal.classList.add('active');
 }
 function animateSkils(){
-    const skillsec=document.getElementById('skills');
+    const skillsec=document.getElementById('experience');
     const symbols = '?{}[]()<>!@#$%^&*+=_|';
     const count = 500;
     for (let i = 0; i < count; i++) {
