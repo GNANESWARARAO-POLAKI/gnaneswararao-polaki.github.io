@@ -1,0 +1,16 @@
+assets/icons/svgs/regular/*
+assets/icons/svgs/brands/*
+assets/icons/svgs/solid/*
+assets/icons/css/*
+!assets/icons/css/all.min.css
+!assets/icons/svgs/brands/linkedin-in.svg
+!assets/icons/svgs/brands/github.svg
+!assets/icons/svgs/brands/envelope.svg
+!assets/icons/svgs/solid/server.svg
+!assets/icons/svgs/solid/code.svg
+!assets/icons/svgs/solid/tools.svg
+!assets/icons/svgs/solid/calendar-day.svg
+!assets/icons/svgs/solid/computer.svg
+!assets/icons/svgs/solid/location-dot.svg
+!assets/icons/svgs/solid/school.svg
+!assets/icons/svgs/solid/book.svg
