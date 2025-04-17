@@ -1,9 +1,11 @@
 // Navigation Menu Toggle
 const menuBtn = document.querySelector('.menu-btn');
 const navLinks = document.querySelector('.nav-links');
-
+const menuIcon = document.querySelector('#menu-icon')
 menuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    menuIcon.classList.toggle('fa-bars');
+    menuIcon.classList.toggle('fa-xmark');
 });
 
 // Progress Line
