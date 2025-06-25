@@ -103,46 +103,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Form Submission with animation
-const contactForm = document.getElementById('contact-form');
 
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const button = contactForm.querySelector('button');
-    const originalText = button.textContent;
-    // Animation for button
-    button.textContent = 'Sending...';
-    button.style.opacity = '0.7';
-    
-    try {
-        // Simulate sending (replace with actual form submission)
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        // Success animation
-        button.textContent = 'Sent Successfully!';
-        button.style.backgroundColor = '#059669';
-        contactForm.reset();
-        
-        // Reset button after 2 seconds
-        setTimeout(() => {
-            button.textContent = originalText;
-            button.style.opacity = '1';
-            button.style.backgroundColor = '';
-        }, 2000);
-        
-    } catch (error) {
-        // Error animation
-        button.textContent = 'Error! Try Again';
-        button.style.backgroundColor = '#dc2626';
-        
-        // Reset button after 2 seconds
-        setTimeout(() => {
-            button.textContent = originalText;
-            button.style.opacity = '1';
-            button.style.backgroundColor = '';
-        }, 2000);
-    }
-});
 
 // Skills Animation
 function initializeSkills() {

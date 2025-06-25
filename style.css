@@ -280,7 +280,7 @@ nav {
 }
 /* About Section */
 .about {
-    padding: 8rem 2rem;
+    padding: 5em 2rem;
     background-color: #fff;
     position: relative;
     overflow: hidden; /* Ensure background images stay within the section */
@@ -461,7 +461,7 @@ nav {
 
 /* Projects Section */
 .projects {
-    padding: 8rem 2rem;
+    padding: 3rem 2rem;
     background-color: #fff;
     position: relative;
 }
@@ -646,7 +646,7 @@ nav {
 
 /* Contact Section */
 .contact {
-    padding: 8rem 2rem;
+    padding: 4rem 2rem;
     background: linear-gradient(135deg, #f8f9fa 0%, #e5e9ff 100%);
     position: relative;
 }
